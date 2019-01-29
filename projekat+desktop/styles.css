@@ -1,0 +1,257 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #000000, #272727);
+  font-family: "Roboto", sans-serif;
+}
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 4px 2px -2px black;
+}
+
+h2 {
+  text-align: center;
+  text-shadow: 1px 1px 4px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: black;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 5px 0 5px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.navbar i {
+  font-size: 2rem;
+}
+
+.list {
+  max-height: 0;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-image: linear-gradient(to bottom, #0ab8f6, #8500ff);
+  text-align: center;
+  border-radius: 0 0 5% 5%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.logo:hover,
+.fa-user:hover,
+.fa-shopping-cart:hover,
+.fa-bars-clicked {
+  color: #ffbc00;
+}
+
+.list a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  border: 1px solid gray;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 370px;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+
+.card {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 10px;
+  border-radius: 5%;
+  background: whitesmoke;
+  padding: 1rem inherit;
+  width: 70%;
+  align-self: center;
+  border-bottom: solid black 0.1px;
+  box-shadow: 0, 0, 2px;
+}
+
+.card-header {
+  background-image: linear-gradient(to left bottom, #0ab8f6, #8500ff);
+  border-radius: 5% 5% 50% 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 3px 3px 6px;
+}
+
+.card-header img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card:hover .card-header {
+  background-image: linear-gradient(to right top, #fb0000, #ffbc00);
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  header {
+    position: fixed;
+    overflow: hidden;
+    width: 70%;
+  }
+
+  .navbar .logo i {
+    order: 1;
+    font-size: 7rem;
+    flex-basis: 100%;
+  }
+
+  .login {
+    order: 3;
+    flex-basis: 10%;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    order: 2;
+    flex-basis: 70%;
+    justify-content: space-around;
+    background-image: none;
+    align-items: center;
+    min-height: 50px;
+    border-radius: 0;
+    margin: 0 3px;
+    overflow: hidden;
+  }
+
+  .list a {
+    overflow: hidden;
+    border: none;
+    margin: 3px;
+  }
+
+  .list li {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 1px 1pz inset;
+    overflow: hidden;
+  }
+
+  .list li:hover {
+    transform: scale(0.95);
+    overflow: hidden;
+  }
+
+  .card {
+    margin: 2rem 1rem;
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    padding: 0 20px 10px;
+    border-radius: 5%;
+    background: whitesmoke;
+    padding: 1rem inherit;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 10px;
+  /* background: #ffbc00; */
+  background-image: linear-gradient(to left bottom, #0ab8f6, #8500ff);
+}
+
+.footer .logo {
+  color: black;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+}
+.contact {
+  margin-top: 10px;
+  flex-basis: 80%;
+}
+
+.contact ul {
+  padding-top: 10px;
+}
+
+.footer li {
+  padding: 3px;
+}
+
+.social {
+  padding: 10px 0;
+  flex-basis: 20%;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.legal {
+  flex-basis: 100%;
+  border-top: 1px solid black;
+  padding-top: 5px;
+  text-align: center;
+}
